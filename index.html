@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042) -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1", maximum-scale=1, user-scalable="no">
+    <meta name="description" content="flash card recite words">
+		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta name="mobile-web-app-capable" content="yes"> 
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+   
+	  <link href="css/carousel.css" rel="stylesheet">
+		<style type="text/css" media="screen">
+			.full-screen {
+				margin: 0 auto;
+				width:  100%;
+				height: 100%;
+			}
+		</style>
+  
+</head>
+
+  <!-- Carousel
+  ================================================== -->
+  <div id="card" class="container">
+    <img id="word" class="img-responsive" src="cards/1.jpg">
+  </div>
+   <!-- /.carousel -->
+	
+	<script type="text/javascript" src="assets/js/jquery.js">	</script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/hammer.min.js"></script>
+	<script type="text/javascript">
+	  h = window.screen.height;
+		w = window.screen.width;
+		
+		$('#word').attr('height', h);
+		$('#word').attr('width', w);
+		var hammer = new Hammer(card);
+		hammer.on("tap swipe", function(e){
+			var i = Math.floor(Math.random() * 100 +1 );
+			$('#word').attr('src', "cards/" + i + ".jpg");
+		});
+		
+	</script>
+  
+</body>
+</html>
