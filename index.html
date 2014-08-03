@@ -44,7 +44,7 @@
 		$('#word').attr('width', w);
 		var hammer = new Hammer(card);
 		hammer.on("tap swipe", function(e){
-			var i = Math.floor(Math.random() * 100 +1 );
+			var i = Math.floor(Math.random() * 10 +1 );
 			$('#word').attr('src', "cards/" + i + ".jpg");
 		});
 		
